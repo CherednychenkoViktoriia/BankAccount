@@ -24,8 +24,10 @@ int main()
         std::cout << "Before sorting: "<< vect[i].id << " " << vect[i].name << " " << vect[i].dateUpdated << " " << vect[i].balance << std::endl;
     }
         
-    std::sort(vect.begin(), vect.end(), [](const Account& a, const Account& b) 
-        { return a.id > b.id, a.name > b.name, a.dateUpdated > b.dateUpdated, a.balance > b.balance; });
+    std::sort(vect.begin(), vect.end(), [](const Account& a, const Account& b) { return a.id > b.id; });
+    std::sort(vect.begin(), vect.end(), [](const Account& a, const Account& b) { return a.name > b.name; });
+    std::sort(vect.begin(), vect.end(), [](const Account& a, const Account& b) { return a.dateUpdated > b.dateUpdated; });
+    std::sort(vect.begin(), vect.end(), [](const Account& a, const Account& b) { return a.balance > b.balance; });
 
     std::cout << std::endl;
 
